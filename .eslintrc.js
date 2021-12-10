@@ -11,7 +11,7 @@ module.exports = {
     'plugin:react/recommended',
     'next/core-web-vitals',
     'eslint-config-next',
-    // 'airbnb',
+    'airbnb',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -24,6 +24,11 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
+    'react/function-component-definition': 0,
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
     'no-underscore-dangle': 0,
     'import/extensions': [
       'error',
