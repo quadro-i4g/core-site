@@ -11,7 +11,7 @@ module.exports = {
     'plugin:react/recommended',
     'next/core-web-vitals',
     'eslint-config-next',
-    'airbnb',
+    // 'airbnb',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
