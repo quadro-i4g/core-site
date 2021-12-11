@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main>
-        <div className="flex flex-col items-center justify-center -mt-20 gap-20 h-screen">
+        <div className="flex flex-col items-center justify-center -mt-10 md:-mt-20 px-4 gap-20 h-screen">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="font-bold text-6xl uppercase">
               Track your credit while you build
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
             </p>
           </div>
 
-          <div className="font-medium flex flex-col items-center gap-4 text-2xl">
+          <div className="font-medium flex flex-col items-center gap-4 text-2xl text-center">
             <p>Dreamers. Futurists. Businesses.</p>
           </div>
 

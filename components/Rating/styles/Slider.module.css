@@ -19,9 +19,13 @@
 .sliderValue {
   margin-bottom: 30px;
 }
+@media (max-width: 640px) {
+  .sliderValue {
+    text-align: center;
+  }
+}
 
 .sliderInside {
-  position: absolute;
   width: 382px;
   height: 8px;
   border-radius: 10px;
@@ -58,4 +62,12 @@
     #eeed52 76%,
     #32e1a0
   );
+}
+
+@media (max-width: 640px) {
+  .sliderBar,
+  .sliderBarWrap,
+  .sliderInside {
+    width: 300px;
+  }
 }
