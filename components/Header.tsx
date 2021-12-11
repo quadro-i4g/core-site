@@ -1,13 +1,15 @@
 const Header = () => {
   return (
-    <header className="max-w-screen-2xl m-auto flex justify-between py-5 px-2 font-bold">
-      <h1>Quadro</h1>
+    <header className="max-w-[1440px] m-auto flex justify-between sticky top-0 bg-white p-6 items-center">
+      <div className="flex items-center gap-3">
+        <h1 className="uppercase font-bold text-2xl">Quadro</h1>
+      </div>
 
-      <nav className="space-x-6">
-        <a>Business</a>
-        <a>Individuals</a>
-        <a>About</a>
-        <a>Contact</a>
+      <nav className="flex gap-10 items-baseline">
+        <a>Sign in</a>
+        <div className="border border-black px-6 py-2 uppercase text-sm rounded">
+          <a>Join for free</a>
+        </div>
       </nav>
     </header>
   );

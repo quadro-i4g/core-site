@@ -18,50 +18,28 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="min-h-screen">
-        <div className="flex flex-col items-center mt-20 gap-20">
-          <div className="max-w-xl mx-auto">
-            <h1 className="font-bold text-6xl text-center">
-              Afford your dreams with our new credit ratings.
+      <main>
+        <div className="flex flex-col items-center justify-center -mt-20 gap-20 h-screen">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h1 className="font-bold text-6xl uppercase">
+              Track your credit while you build
             </h1>
+
+            <p>
+              We generate a credit score based on your financial data to inform
+              lending and your borrowing.
+            </p>
           </div>
 
-          <div className="font-bold flex flex-col items-center gap-4 text-2xl">
+          <div className="font-medium flex flex-col items-center gap-4 text-2xl">
             <p>Dreamers. Futurists. Businesses.</p>
-            <button className="bg-primary-gray rounded-2xl px-6 py-1">
-              Get started
-            </button>
           </div>
-        </div>
 
-        <div className="flex justify-center h-[700px] w-full mt-20">
-          <div className="flex justify-center relative w-2/3 gap-10 max-w-[790px]">
-            <div className="w-1/3 h-[550px] relative self-end">
-              <Image
-                src={Car}
-                alt="photo of car"
-                layout="fill"
-                objectFit={'cover'}
-              />
-            </div>
-            <div className="w-1/3 h-[550px] relative">
-              <Image
-                src={House}
-                alt="photo of house"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="w-1/3 h-[550px] relative self-end">
-              <Image
-                src={Shop}
-                alt="photo of shop"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-          </div>
+          <button className="px-8 bg-primary-green text-white p-3 rounded-md">
+            Get started
+          </button>
         </div>
+        <p>Text</p>
       </main>
     </div>
   );
