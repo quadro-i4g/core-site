@@ -6,9 +6,8 @@ const Header = () => {
       </div>
 
       <nav className="flex gap-10 items-baseline">
-        <a>Sign in</a>
         <div className="border border-black px-6 py-2 uppercase text-sm rounded">
-          <a>Join for free</a>
+          <a href="#rate">Try for free</a>
         </div>
       </nav>
     </header>
