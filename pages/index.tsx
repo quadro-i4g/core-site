@@ -4,9 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Header from '../components/Header';
 
-import Car from '../assets/car.jpg';
-import House from '../assets/house.jpg';
-import Shop from '../assets/shop.jpg';
+import Rating from '../components/Rating';
 
 const Home: NextPage = () => {
   return (
@@ -35,11 +33,16 @@ const Home: NextPage = () => {
             <p>Dreamers. Futurists. Businesses.</p>
           </div>
 
-          <button className="px-8 bg-primary-green text-white p-3 rounded-md">
+          <a
+            href="#rate"
+            className="px-8 bg-primary-green text-white p-3 rounded-md"
+          >
             Get started
-          </button>
+          </a>
         </div>
-        <p>Text</p>
+        <div className="max-w-[1440px] h-screen m-auto flex flex-col justify-center p-6">
+          <Rating />
+        </div>
       </main>
     </div>
   );
