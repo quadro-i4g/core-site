@@ -2,6 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Connect from '@mono.co/connect.js';
 import Header from '../components/Header';
 
 import Car from '../assets/car.jpg';
@@ -9,6 +10,27 @@ import House from '../assets/house.jpg';
 import Shop from '../assets/shop.jpg';
 
 const Home: NextPage = () => {
+  const monoConnect = React.useMemo(() => {
+    if (typeof window !== 'undefined') {
+      const monoInstance = new Connect({
+        key: process.env.NEXT_PUBLIC_MONO_PUB,
+        onSuccess: (data: any) => {
+          console.log('successData', data);
+        },
+        onLoad: () => console.log('widget loaded successfully'),
+        onClose: () => console.log('widget has been closed'),
+        onEvent: (eventName: any, data: any) => {
+          console.log('eventName', eventName);
+          console.log('eventData', data);
+        },
+      });
+
+      monoInstance.setup();
+
+      return monoInstance;
+    }
+  }, []);
+
   return (
     <div>
       <Head>
@@ -61,6 +83,15 @@ const Home: NextPage = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="flex items-center justify-center flex-wrap max-w-3xl">
+          <button
+            onClick={() => monoConnect.open()}
+            className="text-left p-6 border border-blue-400 rounded-xl max-w-xs m-8"
+          >
+            <h2>Connect</h2>
+            <p>Use Connect.js framework to connect to Mono</p>
+          </button>
         </div>
       </main>
     </div>
