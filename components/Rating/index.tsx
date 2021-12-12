@@ -1,7 +1,6 @@
 import useMono from '../../hooks/useMono';
 import Slider from './Slider';
 import Image from 'next/image';
-import { FiLoader } from 'react-icons/fi';
 import MonoIcon from '../../assets/mono.png';
 
 const Rating = () => {
@@ -45,10 +44,10 @@ const Rating = () => {
           }`}
           onClick={() => mono.open()}
         >
-          <div className="flex h-full items-center px-4 border-r border-opacity-30">
+          <div className="flex h-full items-center px-3 border-r border-opacity-30">
             <Image
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               src={MonoIcon}
               alt="Mono"
               className={`${loading && 'animate-spin'}`}

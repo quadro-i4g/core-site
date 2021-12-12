@@ -15,7 +15,6 @@ const useMono = () => {
       const monoInstance = new Connect({
         key: process.env.NEXT_PUBLIC_MONO_PUB,
         onSuccess: (data: any) => {
-          console.log(data);
           setLoading(true);
           axiosInstance({
             method: 'POST',
@@ -25,8 +24,7 @@ const useMono = () => {
             },
           })
             .then(e => {
-              console.log('data', e.data);
-              setScore(e.data.score);
+              setScore(e.data.scores.score);
             })
             .catch(e => console.error(e))
             .finally(() => setLoading(false));
