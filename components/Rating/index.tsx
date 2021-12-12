@@ -2,6 +2,7 @@ import useMono from '../../hooks/useMono';
 import Slider from './Slider';
 import Image from 'next/image';
 import MonoIcon from '../../assets/mono.png';
+import colorize, { Grade } from '../../utils/colorize';
 
 const Rating = () => {
   const { mono, loading, score } = useMono();
@@ -26,11 +27,14 @@ const Rating = () => {
           </ul>
         </div>
         <div className="md:w-1/3 flex justify-center transition-all duration-500 ease-in-out">
-          <Slider score={score} />
+          <Slider score={score.score} />
         </div>
         <div className="text-center md:w-1/3 space-y-2">
-          <span className="text-8xl text-[#32e1a0] font-medium">
-            {grading(score)}
+          <span
+            style={{ color: colorize(score.grade as Grade) }}
+            className={`text-8xl font-medium`}
+          >
+            {score.grade}
           </span>
           <p>Your Grade</p>
         </div>
@@ -38,9 +42,9 @@ const Rating = () => {
 
       <div className="flex flex-col items-center gap-6">
         <button
-          disabled={Boolean(loading || score)}
+          disabled={Boolean(loading || score?.score)}
           className={`min-w-[240px] h-12 flex justify-center items-center bg-[#182CD1] bg-opacity-90 text-white rounded-lg ${
-            !loading && !score && 'animate-pulse'
+            !loading && !score?.score && 'animate-pulse'
           }`}
           onClick={() => mono.open()}
         >
@@ -56,7 +60,7 @@ const Rating = () => {
           <div className="px-4">
             {loading
               ? 'Calculating your score'
-              : score
+              : score?.score
               ? 'Connected with Mono'
               : 'Link account with Mono'}
           </div>

@@ -4,7 +4,10 @@ import axios from 'axios';
 
 const useMono = () => {
   const [loading, setLoading] = useState(false);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState({
+    score: 0,
+    grade: 'N/A',
+  });
 
   const axiosInstance = axios.create({
     baseURL: 'https://quadro-api.herokuapp.com/api/v1',
@@ -24,7 +27,8 @@ const useMono = () => {
             },
           })
             .then(e => {
-              setScore(e.data.scores.score);
+              console.log(e.data);
+              setScore(e.data.scores);
             })
             .catch(e => console.error(e))
             .finally(() => setLoading(false));

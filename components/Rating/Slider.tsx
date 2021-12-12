@@ -4,12 +4,12 @@ const Slider = ({ score }: { score: number }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.sliderValue}>
-        <span>{score}</span>
+        <span>{Math.floor(score)}</span>
       </div>
       <div className={styles.sliderWrapper}>
         <div className={styles.sliderInside} />
-        <div className={styles.sliderBarWrap}>
-          <div className={styles.sliderBar} style={{ width: `${score}%` }} />
+        <div className={styles.sliderBarWrap} style={{ width: `${score}%` }}>
+          <div className={styles.sliderBar} />
         </div>
       </div>
     </div>
