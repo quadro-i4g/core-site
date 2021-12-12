@@ -8,7 +8,7 @@ const Header = () => {
 
         <nav className="flex gap-10 items-baseline">
           <div className="border border-black px-6 py-2 uppercase text-sm rounded">
-            <a href="#rate">Try for free</a>
+            <a href="#rate">Try now</a>
           </div>
         </nav>
       </header>

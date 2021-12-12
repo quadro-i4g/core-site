@@ -6,7 +6,7 @@ const Rating = () => {
   const { mono, loading, score } = useMono();
 
   return (
-    <div className="md:space-y-40 space-y-10 pt-20">
+    <div className="md:space-y-32 space-y-10 pt-20">
       <h1 id="rate" className="text-6xl text-center font-medium">
         Your Credit Score
       </h1>
@@ -16,8 +16,9 @@ const Rating = () => {
           !loading && !score && 'grayscale'
         }`}
       >
-        <div className="md:w-1/3 hidden md:flex justify-center">
-          <ul className="uppercase font-bold space-y-8">
+        <div className="md:w-1/3 hidden md:flex flex-col justify-center uppercase font-bold space-y-4">
+          <p className="">Based on</p>
+          <ul className="space-y-4 list-disc">
             <li>Payment History</li>
             <li>Investment Portfolio</li>
             <li>Credit Record</li>
@@ -51,8 +52,12 @@ const Rating = () => {
           )}
         </button>
         <p className="text-gray-400">
-          We use Mono to ensure the safety of your account details. We never get
-          anywhere close to your account :)
+          We use{' '}
+          <a href="https://mono.co" className="text-black underline">
+            Mono
+          </a>{' '}
+          to ensure the safety of your account details. We never get anywhere
+          close to your account :)
         </p>
       </div>
     </div>
