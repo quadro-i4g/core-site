@@ -1,8 +1,9 @@
 import useMono from '../../hooks/useMono';
 import Slider from './Slider';
+import { FiLoader } from 'react-icons/fi';
 
 const Rating = () => {
-  const mono = useMono();
+  const { mono, loading, score } = useMono();
 
   return (
     <div className="md:space-y-40 space-y-10 pt-20">
@@ -29,10 +30,19 @@ const Rating = () => {
 
       <div className="flex flex-col items-center gap-6">
         <button
-          className="px-8 bg-primary-green text-white p-3 rounded-md animate-pulse"
+          disabled={Boolean(loading || score)}
+          className={`px-8 min-w-[200px] h-12 flex justify-center bg-primary-green text-white p-3 rounded-md ${
+            !loading && !score && 'animate-pulse'
+          }`}
           onClick={() => mono.open()}
         >
-          Connect account
+          {loading ? (
+            <FiLoader className="animate-spin text-2xl" />
+          ) : score ? (
+            'Connected with Mono'
+          ) : (
+            'Connect account'
+          )}
         </button>
         <p className="text-gray-400">
           We use Mono to ensure the safety of your account details. We never get
