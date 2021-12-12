@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import Image from 'next/image';
 
@@ -10,12 +11,17 @@ const Rating = () => {
   const { mono, loading, score } = useMono();
 
   return (
-    <div id="rate" className="pt-20 space-y-10 md:space-y-32">
-      <h1 className="text-6xl font-medium text-center">Your Credit Score</h1>
+    <div
+      id="rate"
+      className="pt-32 xs:pt-20 space-y-5 xs:space-y-10 md:space-y-32"
+    >
+      <h1 className="text-xl xs:text-6xl font-medium text-center">
+        Your Credit Score
+      </h1>
 
       <div
-        className={`max-w-[1440px] mx-auto flex flex-col-reverse items-center gap-20 md:gap-0 md:items-stretch md:flex-row  ${
-          !loading && score.score === 0 && 'grayscale opacity-40'
+        className={`max-w-[1440px] mx-auto flex flex-col-reverse items-center gap-10 xs:gap-20 md:gap-0 md:items-stretch md:flex-row  ${
+          score.score === 0 && 'grayscale opacity-40'
         }`}
       >
         <div className="flex-col justify-center hidden space-y-4 font-bold uppercase md:w-1/3 md:flex">
@@ -59,20 +65,23 @@ const Rating = () => {
             />
           </div>
           <div className="px-4">
-            {loading && 'Calculating your score'}
-            {!loading && score?.score
+            {loading
+              ? 'Calculating your score'
+              : score?.score
               ? 'Connected with Mono'
               : 'Link account with Mono'}
           </div>
         </button>
-        <p className="text-gray-400">
-          We use{' '}
-          <a href="https://mono.co" className="text-black underline">
-            Mono
-          </a>{' '}
-          to ensure the safety of your account details. We never get anywhere
-          close to your account :)
-        </p>
+        <div className="flex justify-center">
+          <p className="text-gray-400 text-center">
+            We use{' '}
+            <a href="https://mono.co" className="text-black underline">
+              Mono
+            </a>{' '}
+            to ensure the safety of your account details. We never get anywhere
+            close to your account :)
+          </p>
+        </div>
       </div>
     </div>
   );

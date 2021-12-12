@@ -32,7 +32,11 @@ const Header = () => {
 
         <nav className="flex items-baseline gap-10">
           <div className="px-6 py-2 text-sm uppercase border border-black rounded">
-            <button type="button" onClick={() => scrollTo('rate')}>
+            <button
+              className="uppercase"
+              type="button"
+              onClick={() => scrollTo('rate')}
+            >
               Try now
             </button>
           </div>

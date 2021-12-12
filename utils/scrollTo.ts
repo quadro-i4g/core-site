@@ -1,7 +1,7 @@
 const scrollTo = (target: string) => {
   document.querySelector(`#${target}`)?.scrollIntoView({
     behavior: 'smooth',
-    block: 'center',
+    block: window.innerWidth < 425 ? 'start' : 'center',
   });
 };
 

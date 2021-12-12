@@ -23,6 +23,10 @@
   .sliderValue {
     text-align: center;
   }
+
+  .sliderWrapper {
+    margin: 40px 0;
+  }
 }
 
 .sliderInside {

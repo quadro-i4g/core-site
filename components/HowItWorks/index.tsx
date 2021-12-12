@@ -7,7 +7,7 @@ import scrollTo from '../../utils/scrollTo';
 const HowItWorks = () => (
   <div
     id="how"
-    className="max-w-[1440px] py-12 sm:py-0 w-full m-auto flex flex-col gap-20"
+    className="max-w-[1440px] w-full m-auto flex flex-col gap-14 xs:gap-20 pt-20 pb-10 xs:pt-0 xs:pb-10"
   >
     <div className="flex w-full">
       <div className="hidden md:flex justify-center w-1/2">
@@ -19,25 +19,27 @@ const HowItWorks = () => (
         />
       </div>
       <div className="flex flex-col gap-5 sm:gap-10 md:w-1/2 pl-10 md:pl-0 justify-center">
-        <h1 className="font-medium text-6xl">How It Works</h1>
-        <ol className={`text-2xl leading-10 space-y-5 ${styles.list}`}>
+        <h1 className="font-medium text-2xl xs:text-6xl">How It Works</h1>
+        <ol
+          className={`text-xl xs:text-2xl xs:leading-10 space-y-5 ${styles.list}`}
+        >
           <li>
             <b>Let us get to know you</b>
-            <p className="text-xl">
+            <p className="xs:text-xl">
               Using Mono, securely make your financial data available to us for
               assessing your credit rating.{' '}
             </p>
           </li>
           <li>
             <b>We crunch the numbers!</b>
-            <p className="text-xl">
+            <p className="xs:text-xl">
               Based on your income history, investment portfolio and credit
               record among others we calculate your rating.
             </p>
           </li>
           <li>
             <b>Get your Quadro rating </b>
-            <p className="text-xl">
+            <p className="xs:text-xl">
               We return an assesment of credit worthiness to inform lending and
               borrowing.{' '}
             </p>
