@@ -27,7 +27,7 @@ const Home: NextPage = () => (
           className="absolute right-5 bottom-0 hidden md:block md:h-[500px] aspect-1 blur-md"
         />
         <div className="z-10 max-w-4xl mx-auto space-y-6 text-center animate-fade">
-          <h1 className="text-2xl xs:text-6xl font-bold uppercase">
+          <h1 className="text-2xl font-bold uppercase xs:text-6xl">
             Track your credit while you build
           </h1>
 
@@ -37,7 +37,7 @@ const Home: NextPage = () => (
           </p>
         </div>
 
-        <div className="z-10 flex flex-col items-center gap-4 text-xl xs:text-2xl font-medium text-center animate-fade">
+        <div className="z-10 flex flex-col items-center gap-4 text-xl font-medium text-center xs:text-2xl animate-fade">
           <p>Dreamers. Futurists. Businesses.</p>
         </div>
 
@@ -58,7 +58,7 @@ const Home: NextPage = () => (
           alt="Promotional ilustration"
           className="absolute right-5 bottom-0 hidden md:block h-0 md:h-[500px] aspect-1 blur-md"
         />
-        <div className="py-12 sm:py-0 relative max-w-[1440px] min-h-screen m-auto flex flex-col justify-center p-6">
+        <div className="lg:py-12 py-0 relative max-w-[1440px] min-h-screen m-auto flex flex-col justify-center px-6">
           <Rating />
         </div>
       </div>
