@@ -1,6 +1,8 @@
+import React from 'react';
+import Image from 'next/image';
+
 import useMono from '../../hooks/useMono';
 import Slider from './Slider';
-import Image from 'next/image';
 import MonoIcon from '../../assets/mono.png';
 import colorize, { Grade } from '../../utils/colorize';
 
@@ -8,8 +10,8 @@ const Rating = () => {
   const { mono, loading, score } = useMono();
 
   return (
-    <div className="md:space-y-32 space-y-10 pt-20">
-      <h1 id="rate" className="text-6xl text-center font-medium">
+    <div className="pt-20 space-y-10 md:space-y-32">
+      <h1 id="rate" className="text-6xl font-medium text-center">
         Your Credit Score
       </h1>
 
@@ -18,7 +20,7 @@ const Rating = () => {
           !loading && score.score === 0 && 'grayscale opacity-40'
         }`}
       >
-        <div className="md:w-1/3 hidden md:flex flex-col justify-center uppercase font-bold space-y-4">
+        <div className="flex-col justify-center hidden space-y-4 font-bold uppercase md:w-1/3 md:flex">
           <p className="">Based on</p>
           <ul className="space-y-4 list-disc">
             <li>Payment History</li>
@@ -26,13 +28,13 @@ const Rating = () => {
             <li>Credit Record</li>
           </ul>
         </div>
-        <div className="md:w-1/3 flex justify-center transition-all duration-500 ease-in-out">
+        <div className="flex justify-center transition-all duration-500 ease-in-out md:w-1/3">
           <Slider score={score.score} />
         </div>
-        <div className="text-center md:w-1/3 space-y-2">
+        <div className="space-y-2 text-center md:w-1/3">
           <span
             style={{ color: colorize(score.grade as Grade) }}
-            className={`text-8xl font-medium`}
+            className="font-medium text-8xl"
           >
             {score.grade}
           </span>
@@ -42,13 +44,14 @@ const Rating = () => {
 
       <div className="flex flex-col items-center gap-6">
         <button
+          type="button"
           disabled={Boolean(loading || score?.score)}
           className={`min-w-[240px] h-12 flex justify-center items-center bg-[#182CD1] bg-opacity-90 text-white rounded-lg ${
             !loading && !score?.score && 'animate-pulse'
           }`}
           onClick={() => mono.open()}
         >
-          <div className="flex h-full items-center px-3 border-r border-opacity-30">
+          <div className="flex items-center h-full px-3 border-r border-opacity-30">
             <Image
               width={25}
               height={25}
@@ -58,9 +61,8 @@ const Rating = () => {
             />
           </div>
           <div className="px-4">
-            {loading
-              ? 'Calculating your score'
-              : score?.score
+            {loading && 'Calculating your score'}
+            {!loading && score?.score
               ? 'Connected with Mono'
               : 'Link account with Mono'}
           </div>
@@ -79,19 +81,3 @@ const Rating = () => {
 };
 
 export default Rating;
-
-const grading = (score: number) => {
-  let grade = '';
-
-  if (score > 0 && score <= 29) grade = 'F';
-  else if (score >= 30 && score <= 49) grade = 'E';
-  else if (score >= 50 && score <= 64) grade = 'D';
-  else if (score >= 65 && score <= 79) grade = 'C';
-  else if (score >= 80 && score <= 89) grade = 'B';
-  else if (score >= 90 && score <= 100) grade = 'A';
-  else {
-    grade = 'N/A';
-  }
-
-  return grade;
-};

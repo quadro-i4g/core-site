@@ -11,7 +11,7 @@ module.exports = {
     'plugin:react/recommended',
     'next/core-web-vitals',
     'eslint-config-next',
-    // 'airbnb',
+    'airbnb',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -28,13 +28,15 @@ module.exports = {
     'import/extensions': [
       'error',
       'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
+      { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' },
     ],
+
+    'react/jsx-props-no-spreading': 0,
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
+    'react/function-component-definition': 0,
   },
   overrides: [
     {
