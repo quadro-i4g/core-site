@@ -11,14 +11,14 @@ const Rating = () => {
       </h1>
 
       <div className="max-w-[1440px] grayscale mx-auto flex flex-col-reverse items-center gap-20 md:gap-0 md:items-stretch md:flex-row">
-        <div className="md:w-1/3 hidden md:block">
+        <div className="md:w-1/3 hidden md:flex justify-center">
           <ul className="uppercase font-bold space-y-8">
             <li>Payment History</li>
             <li>Investment Portfolio</li>
             <li>Credit Record</li>
           </ul>
         </div>
-        <div className="md:w-1/3">
+        <div className="md:w-1/3 flex justify-center">
           <Slider />
         </div>
         <div className="text-center md:w-1/3">
@@ -29,7 +29,7 @@ const Rating = () => {
 
       <div className="flex flex-col items-center gap-6">
         <button
-          className="px-8 bg-primary-green text-white p-3 rounded-md"
+          className="px-8 bg-primary-green text-white p-3 rounded-md animate-pulse"
           onClick={() => mono.open()}
         >
           Connect account
