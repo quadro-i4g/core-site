@@ -11,7 +11,11 @@ const Rating = () => {
         Your Credit Score
       </h1>
 
-      <div className="max-w-[1440px] grayscale mx-auto flex flex-col-reverse items-center gap-20 md:gap-0 md:items-stretch md:flex-row">
+      <div
+        className={`max-w-[1440px] mx-auto flex flex-col-reverse items-center gap-20 md:gap-0 md:items-stretch md:flex-row  ${
+          !loading && !score && 'grayscale'
+        }`}
+      >
         <div className="md:w-1/3 hidden md:flex justify-center">
           <ul className="uppercase font-bold space-y-8">
             <li>Payment History</li>
@@ -19,11 +23,13 @@ const Rating = () => {
             <li>Credit Record</li>
           </ul>
         </div>
-        <div className="md:w-1/3 flex justify-center">
-          <Slider />
+        <div className="md:w-1/3 flex justify-center transition-all duration-500 ease-in-out">
+          <Slider score={score} />
         </div>
-        <div className="text-center md:w-1/3">
-          <span className="text-8xl text-[#32e1a0] font-medium">B</span>
+        <div className="text-center md:w-1/3 space-y-2">
+          <span className="text-8xl text-[#32e1a0] font-medium">
+            {grading(score)}
+          </span>
           <p>Your Grade</p>
         </div>
       </div>
@@ -54,3 +60,19 @@ const Rating = () => {
 };
 
 export default Rating;
+
+const grading = (score: number) => {
+  let grade = '';
+
+  if (score > 0 && score <= 29) grade = 'F';
+  else if (score >= 30 && score <= 49) grade = 'E';
+  else if (score >= 50 && score <= 64) grade = 'D';
+  else if (score >= 65 && score <= 79) grade = 'C';
+  else if (score >= 80 && score <= 89) grade = 'B';
+  else if (score >= 90 && score <= 100) grade = 'A';
+  else {
+    grade = 'N/A';
+  }
+
+  return grade;
+};

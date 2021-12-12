@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const useMono = () => {
   const [loading, setLoading] = useState(false);
-  const [score, setScore] = useState(null);
+  const [score, setScore] = useState(0);
 
   const axiosInstance = axios.create({
     baseURL: 'https://quadro-api.herokuapp.com/api/v1',
