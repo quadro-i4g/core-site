@@ -4,11 +4,7 @@ import axios from 'axios';
 
 const useMono = () => {
   const [loading, setLoading] = useState(false);
-  const [score, setScore] = useState({
-    score: 0,
-    grade: 'N/A',
-  });
-
+  const [score, setScore] = useState({ score: 0, grade: 'N/A' });
   const axiosInstance = axios.create({
     baseURL: 'https://quadro-api.herokuapp.com/api/v1',
   });
@@ -27,10 +23,12 @@ const useMono = () => {
             },
           })
             .then(e => {
-              console.log(e.data);
+              if (process.env.NODE_ENV !== 'production') console.log(e.data);
               setScore(e.data.scores);
             })
-            .catch(e => console.error(e))
+            .catch(e => {
+              if (process.env.NODE_ENV !== 'production') console.error(e);
+            })
             .finally(() => setLoading(false));
         },
       });
@@ -39,6 +37,7 @@ const useMono = () => {
 
       return monoInstance;
     }
+    return null;
   }, [axiosInstance]);
 
   return { mono, loading, score };
