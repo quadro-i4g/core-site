@@ -24,7 +24,7 @@ const Header = () => {
         animate && 'shadow-md '
       }`}
     >
-      <header className="max-w-[1440px] m-auto flex justify-between xs:p-6 items-center">
+      <header className="max-w-[1440px] m-auto flex justify-between px-2 xs:px-6 xs:py-3 items-center">
         <div className="flex items-center gap-3">
           <Image src={Logo} alt="Quadro Logo" height={70} width={219.59} />
           {/* <h1 className="uppercase font-bold text-2xl">Quadro</h1> */}
