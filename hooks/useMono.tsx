@@ -15,7 +15,7 @@ const useMono = () => {
       const monoInstance = new Connect({
         key: process.env.NEXT_PUBLIC_MONO_PUB,
         onSuccess: (data: any) => {
-          console.log('successData', data);
+          console.log(data);
           setLoading(true);
           axiosInstance({
             method: 'POST',
@@ -24,11 +24,9 @@ const useMono = () => {
               code: data.code,
             },
           })
-            .then(() => {
-              axiosInstance({
-                method: 'GET',
-                url: `/credit/${data.code}/score`,
-              }).then(e => setScore(e.data.score));
+            .then(e => {
+              console.log('data', e.data);
+              setScore(e.data.score);
             })
             .catch(e => console.error(e))
             .finally(() => setLoading(false));

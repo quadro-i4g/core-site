@@ -1,6 +1,8 @@
 import useMono from '../../hooks/useMono';
 import Slider from './Slider';
+import Image from 'next/image';
 import { FiLoader } from 'react-icons/fi';
+import MonoIcon from '../../assets/mono.png';
 
 const Rating = () => {
   const { mono, loading, score } = useMono();
@@ -38,18 +40,27 @@ const Rating = () => {
       <div className="flex flex-col items-center gap-6">
         <button
           disabled={Boolean(loading || score)}
-          className={`px-8 min-w-[200px] h-12 flex justify-center bg-primary-green text-white p-3 rounded-md ${
+          className={`min-w-[240px] h-12 flex justify-center items-center bg-[#182CD1] bg-opacity-90 text-white rounded-lg ${
             !loading && !score && 'animate-pulse'
           }`}
           onClick={() => mono.open()}
         >
-          {loading ? (
-            <FiLoader className="animate-spin text-2xl" />
-          ) : score ? (
-            'Connected with Mono'
-          ) : (
-            'Connect account'
-          )}
+          <div className="flex h-full items-center px-4 border-r border-opacity-30">
+            <Image
+              width={30}
+              height={30}
+              src={MonoIcon}
+              alt="Mono"
+              className={`${loading && 'animate-spin'}`}
+            />
+          </div>
+          <div className="px-4">
+            {loading
+              ? 'Calculating your score'
+              : score
+              ? 'Connected with Mono'
+              : 'Link account with Mono'}
+          </div>
         </button>
         <p className="text-gray-400">
           We use{' '}
