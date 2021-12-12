@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -6,6 +7,7 @@ import Header from '../components/Header';
 import Rating from '../components/Rating';
 import Illustration1 from '../assets/ill_1.png';
 import Illustration2 from '../assets/ill_2.png';
+import HowItWorks from '../components/HowItWorks';
 
 const Home: NextPage = () => (
   <div>
@@ -39,7 +41,7 @@ const Home: NextPage = () => (
         </div>
 
         <a
-          href="#rate"
+          href="#how"
           className="z-10 p-3 px-8 text-white rounded-md bg-primary-green animate-fade"
         >
           Get started
@@ -51,6 +53,9 @@ const Home: NextPage = () => (
           alt="Promotional ilustration"
           className="absolute left-5 bottom-0 hidden md:block h-0 md:h-[500px] aspect-1 blur-md"
         />
+        <div className="relative bg-[#f8ba37] h-screen m-auto flex flex-col justify-center p-6">
+          <HowItWorks />
+        </div>
         <div className="relative max-w-[1440px] h-screen m-auto flex flex-col justify-center p-6">
           <Rating />
         </div>

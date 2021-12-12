@@ -1,0 +1,21 @@
+.list {
+  list-style-type: none;
+}
+
+.list li {
+  position: relative;
+}
+
+.list li::before {
+  content: '👀 ';
+  position: absolute;
+  left: -1.8em;
+}
+
+.list li:nth-of-type(2)::before {
+  content: '⚙️';
+}
+
+.list li:last-of-type::before {
+  content: ' 🚀';
+}

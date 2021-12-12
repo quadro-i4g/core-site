@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <div
       className={`w-full fixed top-0 z-50 transition-all duration-500 ease-in-out  ${
-        animate && 'shadow-md bg-white'
+        animate && 'shadow-md '
       }`}
     >
       <header className="max-w-[1440px] m-auto flex justify-between p-6 items-center">
