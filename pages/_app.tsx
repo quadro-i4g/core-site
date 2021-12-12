@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="w-full min-h-screen">
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </div>
   );
 }

@@ -19,7 +19,7 @@ const Home: NextPage = () => (
     </Head>
 
     <Header />
-    <main>
+    <main className="bg-[#f8ba37]">
       <div className="flex flex-col items-center justify-center h-screen gap-20 px-4 bg-primary-gray">
         <img
           src={Illustration1.src}
@@ -49,16 +49,16 @@ const Home: NextPage = () => (
           Get started
         </button>
       </div>
-      <div className="relative">
+      <div className="relative my-20 sm:py-0 bg-[#f8ba37] h-screen m-auto flex flex-col justify-center p-6">
+        <HowItWorks />
+      </div>
+      <div className="relative bg-primary-gray">
         <img
           src={Illustration2.src}
           alt="Promotional ilustration"
           className="absolute right-5 bottom-0 hidden md:block h-0 md:h-[500px] aspect-1 blur-md"
         />
-        <div className="relative bg-[#f8ba37] h-screen m-auto flex flex-col justify-center p-6">
-          <HowItWorks />
-        </div>
-        <div className="relative max-w-[1440px] h-screen m-auto flex flex-col justify-center p-6">
+        <div className="py-12 sm:py-0 relative max-w-[1440px] h-screen m-auto flex flex-col justify-center p-6">
           <Rating />
         </div>
       </div>

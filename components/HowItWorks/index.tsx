@@ -5,17 +5,20 @@ import styles from './styles/list.module.css';
 import scrollTo from '../../utils/scrollTo';
 
 const HowItWorks = () => (
-  <div id="how" className="max-w-[1440px] w-full m-auto flex flex-col gap-20">
+  <div
+    id="how"
+    className="max-w-[1440px] py-12 sm:py-0 w-full m-auto flex flex-col gap-20"
+  >
     <div className="flex w-full">
-      <div className="flex justify-center w-1/2">
+      <div className="hidden md:flex justify-center w-1/2">
         <img
           draggable="false"
           src={Punch.src}
-          className="aspect-1 w-[75%]"
+          className="aspect-1 w-[75%] object-contain"
           alt="Illustration of bars"
         />
       </div>
-      <div className="flex flex-col gap-10 w-1/2 justify-center">
+      <div className="flex flex-col gap-5 sm:gap-10 md:w-1/2 pl-10 md:pl-0 justify-center">
         <h1 className="font-medium text-6xl">How It Works</h1>
         <ol className={`text-2xl leading-10 space-y-5 ${styles.list}`}>
           <li>

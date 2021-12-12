@@ -1,4 +1,6 @@
 const aspectRatio = require('@tailwindcss/aspect-ratio');
+// eslint-disable-next-line import/no-extraneous-dependencies
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
@@ -6,6 +8,10 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      xs: '475px',
+      ...defaultTheme.screens,
+    },
     extend: {
       colors: {
         primary: {
