@@ -53,7 +53,7 @@ const Home: NextPage = () => (
         <img
           src={Illustration2.src}
           alt="Promotional ilustration"
-          className="absolute left-5 bottom-0 hidden md:block h-0 md:h-[500px] aspect-1 blur-md"
+          className="absolute right-5 bottom-0 hidden md:block h-0 md:h-[500px] aspect-1 blur-md"
         />
         <div className="relative bg-[#f8ba37] h-screen m-auto flex flex-col justify-center p-6">
           <HowItWorks />
