@@ -15,7 +15,7 @@ const Rating = () => {
 
       <div
         className={`max-w-[1440px] mx-auto flex flex-col-reverse items-center gap-20 md:gap-0 md:items-stretch md:flex-row  ${
-          !loading && !score && 'grayscale'
+          !loading && score.score === 0 && 'grayscale opacity-40'
         }`}
       >
         <div className="md:w-1/3 hidden md:flex flex-col justify-center uppercase font-bold space-y-4">
