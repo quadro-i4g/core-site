@@ -1,10 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import Header from '../components/Header';
 
+import Header from '../components/Header';
 import Rating from '../components/Rating';
+import Illustration1 from '../assets/ill_1.png';
+import Illustration2 from '../assets/ill_2.png';
 
 const Home: NextPage = () => {
   return (
@@ -17,8 +20,13 @@ const Home: NextPage = () => {
 
       <Header />
       <main>
-        <div className="flex flex-col items-center justify-center -mt-10 md:-mt-20 px-4 gap-20 h-screen">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+        <div className="flex flex-col items-center justify-center bg-primary-gray px-4 gap-20 h-screen">
+          <img
+            src={Illustration1.src}
+            alt="Promotional ilustration"
+            className="absolute right-5 bottom-0 hidden md:block md:h-[500px] aspect-1 blur-md"
+          />
+          <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade z-10">
             <h1 className="font-bold text-6xl uppercase">
               Track your credit while you build
             </h1>
@@ -29,19 +37,26 @@ const Home: NextPage = () => {
             </p>
           </div>
 
-          <div className="font-medium flex flex-col items-center gap-4 text-2xl text-center">
+          <div className="font-medium flex flex-col items-center gap-4 text-2xl text-center animate-fade z-10">
             <p>Dreamers. Futurists. Businesses.</p>
           </div>
 
           <a
             href="#rate"
-            className="px-8 bg-primary-green text-white p-3 rounded-md"
+            className="px-8 bg-primary-green text-white p-3 rounded-md animate-fade z-10"
           >
             Get started
           </a>
         </div>
-        <div className="max-w-[1440px] h-screen m-auto flex flex-col justify-center p-6">
-          <Rating />
+        <div className="relative">
+          <img
+            src={Illustration2.src}
+            alt="Promotional ilustration"
+            className="absolute left-5 bottom-0 hidden md:block h-0 md:h-[500px] aspect-1 blur-md"
+          />
+          <div className="relative max-w-[1440px] h-screen m-auto flex flex-col justify-center p-6">
+            <Rating />
+          </div>
         </div>
       </main>
     </div>

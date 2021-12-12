@@ -7,8 +7,23 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          gray: '#C4C4C4',
+          gray: 'rgb(239 239 239)',
           green: '#1ebaba',
+        },
+      },
+      animation: {
+        fade: 'fadeInBottom 0.5s linear',
+      },
+
+      keyframes: {
+        fadeInBottom: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(100%)',
+          },
+          '100%': {
+            opacity: 1,
+          },
         },
       },
     },
