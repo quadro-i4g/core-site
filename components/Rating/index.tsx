@@ -10,10 +10,8 @@ const Rating = () => {
   const { mono, loading, score } = useMono();
 
   return (
-    <div className="pt-20 space-y-10 md:space-y-32">
-      <h1 id="rate" className="text-6xl font-medium text-center">
-        Your Credit Score
-      </h1>
+    <div id="rate" className="pt-20 space-y-10 md:space-y-32">
+      <h1 className="text-6xl font-medium text-center">Your Credit Score</h1>
 
       <div
         className={`max-w-[1440px] mx-auto flex flex-col-reverse items-center gap-20 md:gap-0 md:items-stretch md:flex-row  ${

@@ -8,6 +8,7 @@ import Rating from '../components/Rating';
 import Illustration1 from '../assets/ill_1.png';
 import Illustration2 from '../assets/ill_2.png';
 import HowItWorks from '../components/HowItWorks';
+import scrollTo from '../utils/scrollTo';
 
 const Home: NextPage = () => (
   <div>
@@ -40,12 +41,13 @@ const Home: NextPage = () => (
           <p>Dreamers. Futurists. Businesses.</p>
         </div>
 
-        <a
-          href="#how"
+        <button
+          type="button"
+          onClick={() => scrollTo('how')}
           className="z-10 p-3 px-8 text-white rounded-md bg-primary-green animate-fade"
         >
           Get started
-        </a>
+        </button>
       </div>
       <div className="relative">
         <img

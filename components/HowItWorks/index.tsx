@@ -2,9 +2,10 @@
 import React from 'react';
 import Punch from '../../assets/punch.png';
 import styles from './styles/list.module.css';
+import scrollTo from '../../utils/scrollTo';
 
 const HowItWorks = () => (
-  <div className="max-w-[1440px] w-full m-auto flex flex-col gap-20">
+  <div id="how" className="max-w-[1440px] w-full m-auto flex flex-col gap-20">
     <div className="flex w-full">
       <div className="flex justify-center w-1/2">
         <img
@@ -15,9 +16,7 @@ const HowItWorks = () => (
         />
       </div>
       <div className="flex flex-col gap-10 w-1/2 justify-center">
-        <h1 id="how" className="font-medium text-6xl">
-          How It Works
-        </h1>
+        <h1 className="font-medium text-6xl">How It Works</h1>
         <ol className={`text-2xl leading-10 space-y-5 ${styles.list}`}>
           <li>
             <b>Let us get to know you</b>
@@ -44,12 +43,13 @@ const HowItWorks = () => (
       </div>
     </div>
     <div className="flex justify-center">
-      <a
-        href="#rate"
+      <button
+        type="button"
+        onClick={() => scrollTo('rate')}
         className="z-10 p-3 px-8 text-white rounded-md bg-[#1c9e9e]"
       >
         Get your rating
-      </a>
+      </button>
     </div>
   </div>
 );
