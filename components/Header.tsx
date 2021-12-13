@@ -20,14 +20,14 @@ const Header = () => {
 
   return (
     <div
-      className={`w-full fixed top-0 z-50 transition-all duration-500 ease-in-out bg-primary-gray  ${
+      className={`w-full fixed top-0 z-50 transition-all duration-500 ease-in-out  ${
         animate && 'shadow-md '
       }`}
     >
       <header className="max-w-[1440px] m-auto flex justify-between px-2 xs:px-6 xs:py-3 items-center">
         <div className="flex items-center gap-3">
           <Image src={Logo} alt="Quadro Logo" height={70} width={219.59} />
-          {/* <h1 className="text-2xl font-bold uppercase">Quadro</h1> */}
+          {/* <h1 className="uppercase font-bold text-2xl">Quadro</h1> */}
         </div>
 
         <nav className="flex items-baseline gap-10">
