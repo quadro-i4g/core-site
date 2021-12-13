@@ -15,12 +15,6 @@ Built as our submission for the I4G x Mono Hackathon, Quadro Credit enables anyo
 
 > [https://quadro.vercel.app/](https://quadro.vercel.app/)
 
-### Intro Article
-> https://celestial-spandex-b9b.notion.site/Quadro-Credit-e2daf812cf174f8986cd1bf4d9f3c4cd
-
-### Pitchdeck
-> https://www.canva.com/design/DAEyR_ugrn8/kNqzRbROW_JAJNYkznF84Q/view?utm_content=DAEyR_ugrn8&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
-
 ### Backend Repository
 
 > [https://github.com/quadro-i4g/quadro-credit-core](https://github.com/quadro-i4g/quadro-credit-core)
