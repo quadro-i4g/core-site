@@ -6,6 +6,9 @@ Credit access infrastructure for the African populace.
 
 Built as our submission for the I4G x Mono Hackathon, Quadro Credit enables anyone to quckly and securely generate a credit rating based on their financial history. Financial data is sourced using the [Mono](mono.co) API.
 
+![quadro vercel app_](https://user-images.githubusercontent.com/87580113/145799988-1b711595-148a-4355-8375-930e054e25a0.png)
+
+
 ## Getting Started
 
 ### Live Site
@@ -15,8 +18,6 @@ Built as our submission for the I4G x Mono Hackathon, Quadro Credit enables anyo
 ### Backend Repository
 
 [https://github.com/quadro-i4g/quadro-credit-core](https://github.com/quadro-i4g/quadro-credit-core)
-
-![quadro vercel app_](https://user-images.githubusercontent.com/87580113/145799988-1b711595-148a-4355-8375-930e054e25a0.png)
 
 ### Development
 
