@@ -51,4 +51,4 @@ NEXT_PUBLIC_MONO_PUB= // Mono app public key
 - [Andrew Glago](https://github.com/a11rew)
 - [Obi Fortune](https://github.com/ickynavigator)
 - [Omezibe Obioha](https://github.com/omzi)
-- Joy Ndukwe 
+- [Joy Ndukwe](https://twitter.com/JoyNdukwe13)
