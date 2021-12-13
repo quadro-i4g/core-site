@@ -1,6 +1,6 @@
 # 🚀 Quadro Credit
 
-Credit access infrastructure for the African populace. 
+Credit access infrastructure for Africa. 
 
 ## Description
 
