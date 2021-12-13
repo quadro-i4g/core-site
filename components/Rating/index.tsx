@@ -27,8 +27,8 @@ const Rating = () => {
         <div className="flex-col justify-center hidden space-y-4 font-bold uppercase md:w-1/3 md:flex">
           <p className="">Based on</p>
           <ul className="space-y-4 list-disc">
-            <li>Payment History</li>
-            <li>Investment Portfolio</li>
+            <li>Income History</li>
+            <li>Asset Portfolio</li>
             <li>Credit Record</li>
           </ul>
         </div>
